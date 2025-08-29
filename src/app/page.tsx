@@ -144,8 +144,7 @@ export default function Home() {
                       `https://github.com/jblouin/issueops_itsm_testing/issues/new?template=${issueOp.issueFormTemplate}`,
                       '_blank'
                     )
-                  }
-                >
+                  }>
                   Go
                 </Button>
               </CardContent>
