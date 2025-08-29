@@ -3,6 +3,7 @@ import type { NextConfig } from 'next'
 const nextConfig: NextConfig = {
   output: 'export',
   basePath: '/issueops_itsm_testing',
+  assetPrefix: '/issueops_itsm_testing/', // Add this line
   images: {
     unoptimized: true
   },
