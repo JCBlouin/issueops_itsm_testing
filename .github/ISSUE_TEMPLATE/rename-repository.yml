@@ -1,0 +1,31 @@
+name: '[IssueOps] Rename Repository'
+description: Rename a repository in your organization.
+title: '[IssueOps] Rename Repository'
+labels:
+  - issue-ops
+  - rename-repository
+body:
+  - id: rename_repository_organization
+    type: input
+    attributes:
+      label: GitHub Organization
+      description: GitHub organization where the repository is located
+      placeholder: github
+    validations:
+      required: true
+  - id: rename_repository_current_name
+    type: input
+    attributes:
+      label: GitHub Repository
+      description: GitHub repository's current name
+      placeholder: monarepo
+    validations:
+      required: true
+  - id: rename_repository_new_name
+    type: input
+    attributes:
+      label: New Name
+      description: GitHub repository's new name
+      placeholder: octorepo
+    validations:
+      required: true

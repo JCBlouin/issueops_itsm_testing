@@ -1,0 +1,15 @@
+.next
+.npm
+.rollup.cache
+build
+coverage
+linter
+node_modules
+out
+reports
+
+.DS_Store
+.env*
+next-env.d.ts
+Thumbs.db
+tsconfig.tsbuildinfo

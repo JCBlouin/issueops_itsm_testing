@@ -1,0 +1,46 @@
+name: IssueOps Self-Service Action
+description: A series of utilities to drive a self-service IssueOps portal.
+author: Nick Alteen
+
+branding:
+  icon: check-square
+  color: blue
+
+inputs:
+  ##############################
+  # IssueOps Repository Inputs #
+  ##############################
+  issue_ops_organization:
+    description: IssueOps organization name
+    default: ${{ github.event.repository.owner.login }}
+    required: true
+  issue_ops_repository:
+    description: IssueOps repository name
+    default: ${{ github.event.repository.name }}
+    required: true
+  issue_number:
+    description: IssueOps issue number
+    default: ${{ github.event.issue.number }}
+    required: true
+
+  ##############################
+  #        Action Inputs       #
+  ##############################
+  action:
+    description: Self-service action to run (e.g. `rename-repository`)
+    required: true
+  api_url:
+    description: The GitHub API URL to use.
+    required: false
+    default: ${{ github.api_url }}
+  parsed_issue_body:
+    description: Parsed issue body
+    required: true
+
+outputs:
+  new_name:
+    description: The new name of the repository
+
+runs:
+  using: node20
+  main: dist/index.js
