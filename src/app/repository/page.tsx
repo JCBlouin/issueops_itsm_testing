@@ -36,7 +36,13 @@ export default function Home() {
                 <CardDescription>{issueOp.description}</CardDescription>
               </CardHeader>
               <CardContent className="mt-auto flex justify-end items-end">
-                <Button className="bg-blue-500 text-white py-2 px-4 rounded">
+                <Button 
+                  className="bg-blue-500 text-white py-2 px-4 rounded"
+                  onClick={() => {
+                    const url = `https://github.com/jblouin/issueops_itsm_testing/issues/new?template=${issueOp.issueFormTemplate}`
+                    window.open(url, '_blank')
+                  }}
+                >
                   Go
                 </Button>
               </CardContent>
